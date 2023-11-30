@@ -126,16 +126,7 @@ class AnalytiikkaTieServicesStack(Stack):
 
 
 
-        # glue_sampo_oracle_connection = GlueJdbcConnection(self,
-        #                         id = "sampo-jdbc-oracle-connection",
-        #                         vpc = vpc,
-        #                         security_groups = [ glue_securitygroup ],
-        #                         properties = {
-        #                             "JDBC_CONNECTION_URL": "jdbc:oracle:thin:@//<host>:<port>/<sid>",
-        #                             "JDBC_DRIVER_CLASS_NAME": "oracle.jdbc.driver.OracleDriver",
-        #                             "JDBC_DRIVER_JAR_URI": f"s3://{script_bucket_name}/drivers/oracle/ojdbc8.jar",
-        #                             "SECRET_ID": f"db-sampo-oracle-{environment}"
-        #                         })
+
         # g1 = PythonSparkGlueJob(self,
         #          id = "testi3", 
         #          path = "glue/testi3",
@@ -148,7 +139,6 @@ class AnalytiikkaTieServicesStack(Stack):
         #          role = glue_role,
         #          tags = None,
         #          arguments = None,
-        #          connections = [ glue_sampo_oracle_connection.connection ],
         #          enable_spark_ui = False,
         #          schedule = "0 12 24 * ? *",
         #          schedule_description = "Normaali ajastus"
